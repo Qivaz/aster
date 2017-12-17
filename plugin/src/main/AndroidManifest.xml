@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="io.qivaz.demo.plugin"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name=".PluginMainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+                <action android:name="io.qivaz.plugin.test"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PluginActivity0"
+            android:label="@string/app_name0"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+                <action android:name="io.qivaz.plugin.test"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PluginActivity1"
+            android:exported="true"
+            android:label="PluginActivity1">
+        </activity>
+        <activity
+            android:name=".PluginActivity2"
+            android:label="@string/app_name2">
+            <intent-filter>
+                <action android:name="io.qivaz.plugin.test"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PluginActivity3"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="io.qivaz.plugin.test"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PluginActivityTranslucent"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+        </activity>
+
+        <service
+            android:name=".PluginService0"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.qivaz.plugin.testService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".PluginService1"
+            android:exported="true">
+        </service>
+        <service
+            android:name=".PluginService2"
+            android:exported="true"/>
+        <service
+            android:name=".PluginService3"
+            android:exported="false"/>
+        <service
+            android:name=".PluginService4"
+            android:exported="false"/>
+        <service
+            android:name=".PluginService5"
+            android:exported="false"/>
+        <service
+            android:name=".PluginService6"
+            android:exported="false"/>
+
+        <meta-data
+            android:name="io.qivaz.aster.ALIAS_NAME"
+            android:value="plugin"/>
+
+        <receiver
+            android:name=".PluginReceiver1"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.CLOSE_SYSTEM_DIALOGS"/>
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name=".PluginContentProvider"
+            android:authorities="io.qivaz.aster.PLUGIN_PROVIDER"
+            android:enabled="true"
+            android:exported="true">
+        </provider>
+    </application>
+
+</manifest>

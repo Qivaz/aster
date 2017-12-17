@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PluginMain</string>
+    <string name="app_name0">Plugin0</string>
+    <string name="app_name1">Plugin1</string>
+    <string name="app_name2">Plugin2</string>
+    <string name="app_name3">Plugin3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="toast_string">I AM a TOAST!!!!</string>
+</resources>

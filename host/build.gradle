@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion Integer.valueOf(gradle.compileSdk)
+    buildToolsVersion gradle.buildTools
+    defaultConfig {
+        applicationId "io.qivaz.demo.host"
+        minSdkVersion Integer.valueOf(gradle.minSdk)
+        targetSdkVersion Integer.valueOf(gradle.targetSdk)
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+//            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled true
+//            debuggable false
+            //signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            zipAlignEnabled true
+//            jniDebuggable false
+//            shrinkResources true
+        }
+    }
+
+    productFlavors.all { flavor ->
+        def appName = "demo_host"
+        def appId = "io.qivaz.demo.host"
+
+        flavor.manifestPlaceholders = [APP_NAME       : appName,
+                                       APP_ID         : appId]
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':aster')
+}

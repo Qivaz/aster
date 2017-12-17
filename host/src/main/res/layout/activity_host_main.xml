@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#7f00ffff"
+            android:drawableLeft="@drawable/ic_check_circle_black_18dp"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="安装插件"
+            android:textSize="15sp"/>
+
+        <TableLayout
+            android:id="@+id/table0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickInstallAssetApks"
+                    android:text="安装所有插件(assets/apk/*.apk)"/>
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickInstallApk"
+                    android:text="安装指定插件"/>
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickUninstallApk"
+                    android:text="卸载指定插件"/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#7f00ffff"
+            android:drawableLeft="@drawable/ic_check_circle_black_18dp"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="启动底座Activity"
+            android:textSize="15sp"/>
+
+        <TableLayout
+            android:id="@+id/table1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickStartHostActivity0"
+                    android:text="启动底座Activity0"/>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickStartHostActivity1"
+                    android:text="启动底座Activity1"/>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickStartHostActivity2"
+                    android:text="启动底座Activity2"/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#7f00ffff"
+            android:drawableLeft="@drawable/ic_check_circle_black_18dp"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="启动插件Activity"
+            android:textSize="15sp"/>
+
+        <TableLayout
+            android:id="@+id/table2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickStartPluginActivity0"
+                    android:text="启动插件Activity0"/>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickStartPluginActivity1"
+                    android:text="启动插件Activity1"/>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickStartPluginActivity2"
+                    android:text="启动插件Activity2"/>
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickStartPluginActivity4Action"
+                    android:text="用Action启动插件Activity"/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#7f00ffff"
+            android:drawableLeft="@drawable/ic_check_circle_black_18dp"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="启动插件Service"
+            android:textSize="15sp"/>
+
+        <TableLayout
+            android:id="@+id/table3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickStartService0"
+                    android:text="Start插件Service0"/>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickStopService0"
+                    android:text="Stop插件Service0"/>
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickBindService1"
+                    android:text="Bind插件Service1"/>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickUnbindService1"
+                    android:text="Unbind插件Service1"/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#7f00ffff"
+            android:drawableLeft="@drawable/ic_check_circle_black_18dp"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="启动Receiver"
+            android:textSize="15sp"/>
+
+        <TableLayout
+            android:id="@+id/table4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickRegisterReceiver"
+                    android:text="注册底座HostReceiver2"/>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickUnregisterReceiver"
+                    android:text="反注册底座HostReceiver2"/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#7f00ffff"
+            android:drawableLeft="@drawable/ic_check_circle_black_18dp"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="启动插件以测试启动底座功能"
+            android:textSize="15sp"/>
+
+        <TableLayout
+            android:id="@+id/table5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickStartPluginMain"
+                    android:text="Start插件Main Activity"/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#7f00ffff"
+            android:drawableLeft="@drawable/ic_check_circle_black_18dp"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="测试调用插件接口"
+            android:textSize="15sp"/>
+
+        <TableLayout
+            android:id="@+id/table6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <Button
+                    android:layout_width="1dip"
+                    android:onClick="onClickStartCallPluginRemoteImpl"
+                    android:text="调用插件接口用例"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

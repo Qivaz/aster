@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion Integer.valueOf(gradle.compileSdk)
+    buildToolsVersion gradle.buildTools
+
+    defaultConfig {
+        applicationId "io.qivaz.demo.plugin"
+        minSdkVersion Integer.valueOf(gradle.minSdk)
+        targetSdkVersion Integer.valueOf(gradle.targetSdk)
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+//    applicationVariants.all { variant ->
+//        variant.outputs.each { output ->
+//            def outputFile = output.outputFile
+//            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                def fileNameOrigin = outputFile.name
+//                def path = getProjectDir().getParent() + "/host/src/main/assets/apk"
+//                output.outputFile = new File(path, "plugin.apk")
+//            }
+//        }
+//    }
+
+/*    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "${variant.name}-${variant.versionName}.apk"
+//            def outputFile = output.outputFile
+//            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                def fileNameOrigin = outputFile.name
+//                def path = getProjectDir().getParent() + "/host/src/main/assets/apk"
+//                output.outputFile = new File(path, "plugin.apk")
+//            }
+        }
+    }*/
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    provided fileTree(dir: '../aster/build/intermediates/bundles/debug', include: '*.jar')
+}

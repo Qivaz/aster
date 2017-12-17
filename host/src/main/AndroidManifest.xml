@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="io.qivaz.demo.host"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:name="io.qivaz.demo.host.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name="io.qivaz.demo.host.activity.HostMainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="io.qivaz.demo.host.activity.HostActivity0"
+            android:label="HostActivity0"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name="io.qivaz.demo.host.activity.HostActivity1"
+            android:label="HostActivity1">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="io.qivaz.host.test"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="io.qivaz.demo.host.activity.HostActivity2"
+            android:label="HostActivity2">
+        </activity>
+        <activity
+            android:name="io.qivaz.demo.host.activity.HostActivity3CallRemote"
+            android:label="HostActivity3">
+        </activity>
+
+        <service
+            android:name="io.qivaz.demo.host.service.HostService0"
+            android:label="HostService0"/>
+        <service
+            android:name="io.qivaz.demo.host.service.HostService1"
+            android:label="HostService1"/>
+
+        <receiver
+            android:name="io.qivaz.demo.host.receiver.HostReceiver1"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="io.qivaz.demo.host.provider.HostContentProvider"
+            android:authorities="io.qivaz.aster.HOST_PROVIDER"
+            android:enabled="true"
+            android:exported="true">
+        </provider>
+
+        <meta-data
+            android:name="debug"
+            android:value="true"/>
+    </application>
+
+</manifest>
